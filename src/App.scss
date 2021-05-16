@@ -1,0 +1,29 @@
+@import './component/variables.scss';
+
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  background-color: $primaryBackgroundColor;
+  // font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: Karla;
+
+  .nav-menu-mobile-component{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  .App{
+    .nav-menu-component{
+      display: none;
+    }
+  }
+}

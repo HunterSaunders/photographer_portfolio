@@ -1,0 +1,60 @@
+@import '../../component/variables';
+
+.home-page-wrapper{
+    @include page-basics;
+
+    .home-page-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+
+        .home-page-text{
+
+            color: $primaryTextColor;
+
+            h1.home-page-name{
+                font-size: 5vmax;
+            }
+            h2.home-page-subtitle{
+                font-size: 1.5vmax;
+                float: right;
+            }
+        }
+
+        img#home-image{
+            max-width: 90vh;
+            width: 60%;
+            opacity: .6;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+    .home-page-wrapper{
+        @include page-basics-mobile;
+        height: 100%;
+        .home-page-container{
+            flex-direction: column;
+            justify-content: space-between;
+
+            .home-page-text{
+                margin-bottom: 3rem;
+                h1.home-page-name{
+                    font-size: 6vmax;
+                }
+                h2.home-page-subtitle{
+                    font-size: 2vmax;
+                }
+            }
+
+            img#home-image{
+                width: 80%;
+            }
+        }
+    }
+}

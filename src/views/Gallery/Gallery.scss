@@ -1,0 +1,120 @@
+@import '../../component/variables';
+
+.gallery-page-wrapper{
+    @include page-basics;
+    
+    
+    .gallery-page-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        color: #fff;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        // grid-gap: 1rem;
+        
+
+        .gallery-img-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 100px;
+            min-height: 100px;
+            overflow: hidden;
+            border: .5rem solid $primaryBackgroundColor;
+
+            &.gallery-item-ssquare{
+                grid-row: span 1;
+                grid-column: span 1;
+                
+            }
+
+            &.gallery-item-lsquare{
+                grid-row: span 2;
+                grid-column: span 2;
+                // aspect-ratio: 1;
+            }
+
+            &.gallery-item-wide{
+                grid-row: span 1;
+                grid-column: span 2;
+                aspect-ratio: 2;
+            }
+
+            &.gallery-item-lwide{
+                grid-row: span 1;
+                grid-column: span 3;
+                aspect-ratio: 3;
+            }
+
+            &.gallery-item-tall{
+                grid-row: span 2;
+                grid-column: span 1;
+                aspect-ratio: .5;
+            }
+            
+            
+            img.gallery-item{
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
+            .image-title{
+                position: absolute;
+                color: blue;
+            }
+        }
+        
+    }
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .gallery-page-wrapper{
+        .gallery-page-container{
+
+            grid-template-columns: 1fr 1fr;
+
+            .gallery-img-container{
+
+                &.gallery-item-ssquare{
+                    grid-row: span 2;
+                    grid-column: span 2;
+
+                }
+
+                &.gallery-item-lsquare{
+                    grid-row: span 2;
+                    grid-column: span 2;
+                }
+
+                &.gallery-item-wide{
+                    grid-row: span 1;
+                    grid-column: span 2;
+                }
+
+                &.gallery-item-tall{
+                    grid-row: span 4;
+                    grid-column: span 2;
+                }
+            }
+            
+
+            
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 900px) {
+    .gallery-page-wrapper{
+        @include page-basics-mobile;
+        
+    }
+
+
+}

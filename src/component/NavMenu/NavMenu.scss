@@ -1,0 +1,84 @@
+@import '../variables.scss';
+
+.nav-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: $primaryBackgroundColor;
+    height: 100vh;
+    width: 150px;
+    padding: 2rem;
+    position: fixed;
+    color: $primaryTextColor;
+
+    div#nav-logo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+
+        h1.nav-logo-letters{
+            font-size: 40px;
+            letter-spacing: 10px;
+            position:fixed;
+        }
+
+        h3.nav-logo-subtitle{
+            position: fixed;
+            margin-top: 3rem;
+            margin-left: 112px;
+            float: right;
+        }
+    }
+
+    nav.nav-menu{
+        list-style: none;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        li.nav-list-item{
+            padding: .5rem 0;
+            a.nav-link{
+                text-decoration: none;
+                color: $primaryTextColor;
+                font-size: 16px;
+                &:hover{
+                    font-size: 23px;
+                    font-weight: bold;
+                    transition: .35s ease-in;
+                }
+            }
+
+            a.nav-link-active{
+                font-size: 23px;
+                font-weight: bold; 
+            }
+        }
+    }
+
+    ul.social-list{
+        list-style: none;
+        li.social-icon{
+            margin: 1rem 0;
+            a.social-link{
+                text-decoration: none;
+                
+                i.fab{
+                    font-size: 20px;
+                    color: $primaryTextColorFaded;
+                }
+            }
+        }
+    }
+}
+
+
+
+@media screen and (max-width: 900px){
+    .nav-wrapper{
+display: none;
+    }
+}

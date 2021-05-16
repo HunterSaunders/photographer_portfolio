@@ -1,0 +1,33 @@
+$primaryBackgroundColor: rgba(0,0,0,1);
+$primaryTextColor: rgba(255,255,255,1);
+$primaryTextColorFaded: rgba(255,255,255,.5);
+
+
+
+@mixin page-basics{
+    width: calc(100vw - 150px);
+    margin-left: 150px;
+    min-height: 100vh;
+    background-color: $primaryBackgroundColor;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+@mixin page-basics-mobile{
+    width: 100%;
+    margin-left: 0;
+    min-height: 100vh;
+    background-color: $primaryBackgroundColor;
+    padding: 4rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 111px;
+    padding-bottom: 72px;
+}
+
+
+
